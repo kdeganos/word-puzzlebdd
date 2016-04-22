@@ -36,4 +36,9 @@ public class WordPuzzleTest extends FluentTest{
     WordPuzzle testWordPuzzle = new WordPuzzle();
     assertEquals("B-l--v- y-- c-n -nd y--'r- h-lfw-y th-r-. Th--d-r- R--s-v-lt", testWordPuzzle.makePuzzle("Believe you can and you're halfway there. Theodore Roosevelt"));
   }
+  @Test
+  public void WordPuzzle_replacesVowelsWithDashesCaseInsensitive_StringWithDashesForVowels() {
+    WordPuzzle testWordPuzzle = new WordPuzzle();
+    assertEquals("-ny -m-rg-ncy", testWordPuzzle.makePuzzle("Any emErgency"));
+  }
 }

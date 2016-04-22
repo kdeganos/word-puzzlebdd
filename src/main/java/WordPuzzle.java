@@ -4,7 +4,7 @@ import java.util.Arrays;
 public class WordPuzzle{
 
   public String makePuzzle (String phrase) {
-    String vowels = "aeiou";
+    String vowels = "aeiouAEIOU";
     char[] toPuzzle = phrase.toCharArray();
 
     for (int index = 0; index < phrase.length(); index++){

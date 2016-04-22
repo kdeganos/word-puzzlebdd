@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="WordPuzzleTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-04-22T16:52:18" hostname="epicodus-49.local" time="0.015">
+<testsuite name="WordPuzzleTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-04-22T17:21:23" hostname="epicodus-49.local" time="0.012">
   <properties/>
   <testcase name="WordPuzzle_replacesVowelsWithDashes_StringWithDashesForVowels" classname="WordPuzzleTest" time="0.004"/>
   <testcase name="WordPuzzle_returnsAStringAsIsWhenNoVowelsArePresent_NoChange" classname="WordPuzzleTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[[Thread-4] INFO org.eclipse.jetty.util.log - Logging initialized @590ms
+[Thread-4] INFO spark.webserver.JettySparkServer - == Spark has ignited ...
+[Thread-4] INFO spark.webserver.JettySparkServer - >> Listening on 0.0.0.0:4567
+[Thread-4] INFO org.eclipse.jetty.server.Server - jetty-9.3.2.v20150730
+[Thread-4] INFO org.eclipse.jetty.server.ServerConnector - Started ServerConnector@1f0e2e67{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+[Thread-4] INFO org.eclipse.jetty.server.Server - Started @654ms
+[Test worker] INFO spark.webserver.JettySparkServer - >>> Spark shutting down ...
+[Test worker] INFO org.eclipse.jetty.server.ServerConnector - Stopped ServerConnector@1f0e2e67{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+[Test worker] INFO spark.webserver.JettySparkServer - done
+]]></system-err>
 </testsuite>
