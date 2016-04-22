@@ -17,13 +17,19 @@ public class WordPuzzleTest extends FluentTest{
   @ClassRule
   public static ServerRule server = new ServerRule();
 
- // @Test
- // public void rootTest() {
- //   goTo("http://localhost:4567/");
- //    fill("#???").with("?");
- //    submit(".btn");
- //    assertThat(pageSource()).contains("what you want to be found related to your method");
- // }
+ @Test
+ public void rootTest() {
+   goTo("http://localhost:4567/");
+   assertThat(pageSource()).contains("will take a word or phrase");
+ }
+
+ @Test
+ public void submitTest() {
+   goTo("http://localhost:4567/");
+    fill("#phrase").with("Believe you can and you're halfway there. Theodore Roosevelt");
+    submit(".btn");
+    assertThat(pageSource()).contains("B-l--v- y-- c-n -nd y--'r- h-lfw-y th-r-. Th--d-r- R--s-v-lt");
+ }
 
  @Test
  public void WordPuzzle_returnsAStringAsIsWhenNoVowelsArePresent_NoChange() {
@@ -36,9 +42,10 @@ public class WordPuzzleTest extends FluentTest{
     WordPuzzle testWordPuzzle = new WordPuzzle();
     assertEquals("B-l--v- y-- c-n -nd y--'r- h-lfw-y th-r-. Th--d-r- R--s-v-lt", testWordPuzzle.makePuzzle("Believe you can and you're halfway there. Theodore Roosevelt"));
   }
+
   @Test
   public void WordPuzzle_replacesVowelsWithDashesCaseInsensitive_StringWithDashesForVowels() {
     WordPuzzle testWordPuzzle = new WordPuzzle();
-    assertEquals("-ny -m-rg-ncy", testWordPuzzle.makePuzzle("Any emErgency"));
+    assertEquals("-ny v-w-l -s r-pl-c-d", testWordPuzzle.makePuzzle("Any vOwEl Is replaced"));
   }
 }
