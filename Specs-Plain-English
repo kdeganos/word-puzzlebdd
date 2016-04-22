@@ -1,0 +1,7 @@
+# Word Puzzle - Plain English Specs:
+
+1. Will replace vowels in a string with the dash symbol "-".
+
+2. String Input: "Believe you can and you're halfway there. Theodore Roosevelt" ... Puzzle Output: "B-l--v- y-- c-n -nd y--'r- h-lfw-y th-r-. Th--d-r- R--s-v-lt:
+
+ 3. Creates a word puzzle on a different page to solve.
