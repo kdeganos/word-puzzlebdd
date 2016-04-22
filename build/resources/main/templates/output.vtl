@@ -1,2 +1,20 @@
 <h1>Here is your puzzle:</h1>
-<h3>$result</h3>
+<h3>$puzzle</h3>
+
+<form action="/hint" method="get">
+  <input name="answer" type="hidden" value="$answer">
+  <input name="puzzle" type="hidden" value="$puzzle">
+  <button type="submit" class="btn btn-info">Hint</button>
+</form>
+
+<form action="/userAttempt" method="get">
+  <div class="form-group">
+    <label for="userAnswer">Enter your answer here:</label>
+    <input id="userAnswer" name="userAnswer" class="form-control" type="text">
+    <input name="answer" type="hidden" value="$answer">
+    <input name="puzzle" type="hidden" value="$puzzle">
+  </div>
+  <button type="submit" class="btn btn-success">Answer</button>
+</form>
+
+<h2>$answerResult</h2>
