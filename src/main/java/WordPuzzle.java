@@ -15,27 +15,27 @@ public class WordPuzzle{
 
     String puzzle = new String(toPuzzle);
     return puzzle;
-   }
+  }
 
-   public String giveHint(String answer, String puzzle) {
-     char[] answerChars = answer.toCharArray();
-     char[] puzzleChars = puzzle.toCharArray();
+  public String giveHint(String answer, String puzzle) {
+    char[] answerChars = answer.toCharArray();
+    char[] puzzleChars = puzzle.toCharArray();
 
-     for (int index = 0; index < answer.length(); index++) {
-       if (puzzleChars[index] != answerChars[index]) {
-         puzzleChars[index] = answerChars[index];
-         break;
-       }
-     }
-     puzzle = new String(puzzleChars);
-     return puzzle;
-   }
+    for (int index = 0; index < answer.length(); index++) {
+      if (puzzleChars[index] != answerChars[index]) {
+        puzzleChars[index] = answerChars[index];
+        break;
+      }
+    }
+    puzzle = new String(puzzleChars);
+    return puzzle;
+  }
 
-   public String answerAttempt(String answer, String userAnswer) {
-     String answerResult = "Try again";
-     if (answer.toLowerCase().equals(userAnswer.toLowerCase())){
-       answerResult = "You are correct";
-     }
-     return answerResult;
-   }
+  public String answerAttempt(String answer, String userAnswer) {
+    String answerResult = "Try again";
+    if (answer.toLowerCase().equals(userAnswer.toLowerCase())){
+      answerResult = "You are correct";
+    }
+    return answerResult;
+  }
 }
