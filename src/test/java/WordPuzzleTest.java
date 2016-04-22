@@ -29,6 +29,25 @@ public class WordPuzzleTest extends FluentTest{
     fill("#phrase").with("Believe you can and you're halfway there. Theodore Roosevelt");
     submit(".btn");
     assertThat(pageSource()).contains("B-l--v- y-- c-n -nd y--'r- h-lfw-y th-r-. Th--d-r- R--s-v-lt");
+  }
+
+ @Test
+ public void hintTest() {
+   goTo("http://localhost:4567/");
+    fill("#phrase").with("Believe you can and you're halfway there. Theodore Roosevelt");
+    submit(".btn");
+    submit("#hintButton");
+    assertThat(pageSource()).contains("Bel--v- y-- c-n -nd y--'r- h-lfw-y th-r-. Th--d-r- R--s-v-lt");
+ }
+
+ @Test
+ public void answerTest() {
+   goTo("http://localhost:4567/");
+    fill("#phrase").with("Believe you can and you're halfway there. Theodore Roosevelt");
+    submit(".btn");
+    fill("#userAnswer").with("Believe you can and you're halfway there. Theodore Roosevelt");
+    submit("#answerButton");
+    assertThat(pageSource()).contains("You are correct");
  }
 
  @Test

@@ -4,7 +4,7 @@
 <form action="/hint" method="get">
   <input name="answer" type="hidden" value="$answer">
   <input name="puzzle" type="hidden" value="$puzzle">
-  <button type="submit" class="btn btn-info">Hint</button>
+  <button id="hintButton" type="submit" class="btn btn-info">Hint</button>
 </form>
 
 <form action="/userAttempt" method="get">
@@ -14,7 +14,7 @@
     <input name="answer" type="hidden" value="$answer">
     <input name="puzzle" type="hidden" value="$puzzle">
   </div>
-  <button type="submit" class="btn btn-success">Answer</button>
+  <button id="answerButton" type="submit" class="btn btn-success">Answer</button>
 </form>
 
 <h2>$answerResult</h2>
