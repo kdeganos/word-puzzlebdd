@@ -16,4 +16,8 @@ public class WordPuzzle{
     String puzzled = new String(toPuzzle);
     return puzzled;
    }
+
+   public String giveHint (String phrase) {
+
+   }
 }

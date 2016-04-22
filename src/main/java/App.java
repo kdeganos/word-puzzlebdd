@@ -8,7 +8,7 @@ import static spark.Spark.*;
 public class App {
   public static void main(String[] args) {
     staticFileLocation("/public");
-    
+
     String layout = "templates/layout.vtl";
 
     get("/", (request, response) -> {
@@ -25,11 +25,25 @@ public class App {
 
       String userInputString = request.queryParams("phrase");
 
-      String puzzle = userPuzzle.makePuzzle(userInputString);
+      puzzle = userPuzzle.makePuzzle(userInputString);
 
       model.put("result", puzzle);
 
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
+
+    // get("/hint", (request, response) -> {
+    //   Map<String, Object> model = new HashMap<String, Object>();
+    //   model.put("template", "templates/output.vtl");
+    //
+    //   WordPuzzle userPuzzle = new WordPuzzle();
+    //
+    //   String answer = request.queryParams("hint")
+    //
+    //
+    //   model.put("newHint", newHint);
+    //
+    //   return new ModelAndView(model, layout);
+    // }, new VelocityTemplateEngine());
   }
 }
